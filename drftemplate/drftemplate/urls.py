@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
 from getTalent.views import (
-    RegisterUser
+    RegisterUser,
+    ValidatePrueba
 )
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', RegisterUser.as_view()),
+    path('validemail/', ValidatePrueba.as_view())
 ]
